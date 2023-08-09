@@ -63,8 +63,14 @@ jobs:
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
-    #- name: Autobuild
-    #  uses: github/codeql-action/autobuild@v2
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu' # See 'Supported distributions' for available options
+        java-version: '17'
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
@@ -72,8 +78,8 @@ jobs:
     #   If the Autobuild fails above, remove it and uncomment the following three lines.
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
 
-    - run: |
-        make release
+    #- run: |
+    #    make release
     #     echo "Run, Build Application using script"
     #     ./location_of_script_within_repo/buildscript.sh
 
