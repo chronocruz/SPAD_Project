@@ -28,6 +28,8 @@ jobs:
     # Consider using larger runners for possible analysis time improvements.
     runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
     timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    paths:
+      - src
     permissions:
       actions: read
       contents: read
@@ -72,8 +74,7 @@ jobs:
     # - run: |
     #     echo "Run, Build Application using script"
     #     ./location_of_script_within_repo/buildscript.sh
-    paths:
-      - src
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
