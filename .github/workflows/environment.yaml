@@ -1,3 +1,12 @@
+name: Environment
+
+on:
+  push:
+    branches: ["main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: ["main"]
+    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -7,7 +16,7 @@ jobs:
 
     - name: Set up database
       run: |
-        # Your setup steps here
+        # Nothing particular needed here for now
       env:
         DB_USER: ${{ secrets.DB_USER }}
         DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
