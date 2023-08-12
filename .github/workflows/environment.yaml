@@ -1,0 +1,23 @@
+name: Environment
+
+on:
+  push:
+    branches: ["main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: ["main"]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up database
+      run: |
+        # Nothing particular needed here for now
+      env:
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
