@@ -2,6 +2,23 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/DeleteBook.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/BookForm.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/LibrarianLogin.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/LibrarianDao.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/AllStudent.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/About.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/DB.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/BookDao.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/NewView.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/IssueBookForm.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/LibrarianSuccess.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/UserForm.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/ViewBook.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/UserLogin.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/UsersDao.java</file>
+            <file>file:/C:/SP/SPAD/SPAD_Project/src/mainlibrary/UserView.java</file>
+        </group>
     </open-files>
 </project-private>

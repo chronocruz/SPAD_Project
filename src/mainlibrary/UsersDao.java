@@ -15,8 +15,34 @@ import java.sql.Statement;
  * @author bikash
  */
 public class UsersDao {
+    public static boolean validate (String name, String password) {
+        boolean status = false;
+        Connection con = null;
+        PreparedStatement prepState = null;
+        ResultSet resultSet = null;
+        try {
+            con = DB.getConnection();
+            String select = "SELECT * FROM Users WHERE UserName= ? AND UserPass= ?";
+            prepState = con.prepareStatement(select);
+            prepState.setString(1, name);
+            prepState.setString(2, password);
+            resultSet = prepState.executeQuery();
+            status = resultSet.next();
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            try {
+                if (resultSet != null) resultSet.close();
+                if (prepState != null) prepState.close();
+                if (con != null) con.close();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        return status;
+    }
 
-    public static boolean validate(String name, String password) {
+    /*public static boolean validate(String name, String password) {
         boolean status = false;
         try {
             Connection con = DB.getConnection();
@@ -29,7 +55,7 @@ public class UsersDao {
             System.out.println(e);
         }
         return status;
-    }
+    }*/
 
     public static boolean CheckIfAlready(String UserName) {
         boolean status = false;
